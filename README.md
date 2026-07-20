@@ -51,18 +51,20 @@ que regenerarlo a mano). Para obtener el PNG:
 
 ## Desplegar en Vercel con dominio propio
 
+El dominio de este proyecto es **yoainstalaciones.com** (Namecheap), ya
+configurado como valor por defecto en `src/app/layout.js`.
+
 1. Entra en [vercel.com/new](https://vercel.com/new) e importa este
-   repositorio (`web_yoa_instalaciones`).
+   repositorio (`Web_yoa_instalaciones`).
 2. Vercel detecta Next.js automáticamente, no hace falta configurar nada
    más para desplegar.
-3. Una vez desplegado, ve a **Project Settings → Domains** y añade tu
-   dominio propio, siguiendo las instrucciones para apuntar los DNS.
-4. (Opcional) En **Project Settings → Environment Variables** añade
-   `NEXT_PUBLIC_SITE_URL=https://tudominio.com` para que las vistas previas
-   al compartir el enlace (redes sociales) usen el dominio correcto. Mira
-   `.env.example`.
-5. Vuelve a visitar `/qr` en el dominio final para descargar el QR
-   definitivo.
+3. Ve a **Project Settings → Domains** y añade `yoainstalaciones.com`.
+   Vercel mostrará los registros DNS a crear (normalmente un `A` para `@`
+   apuntando a `76.76.21.21` y un `CNAME` para `www` apuntando a
+   `cname.vercel-dns.com`) — añádelos en Namecheap, en **Advanced DNS**.
+4. Cuando el DNS propague, Vercel activa el certificado SSL solo.
+5. Visita `/qr` en `https://yoainstalaciones.com/qr` para descargar el QR
+   definitivo con el dominio real.
 
 ## Nota sobre el vídeo de la galería
 
