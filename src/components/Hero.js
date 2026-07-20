@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 import { whatsappLink } from "@/lib/whatsapp";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
@@ -5,7 +6,15 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-stone-900 text-white">
-      <div className="absolute inset-0 bg-[url('/images/trabajos/mueble-tv-chimenea.jpg')] bg-cover bg-center opacity-25" />
+      <Image
+        src="/images/trabajos/mueble-tv-chimenea.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        quality={45}
+        className="object-cover opacity-25"
+      />
       <div className="absolute inset-0 bg-gradient-to-b from-stone-900/70 via-stone-900/85 to-stone-900" />
 
       <div className="relative mx-auto flex max-w-6xl flex-col items-start gap-6 px-5 py-24 sm:py-32">
