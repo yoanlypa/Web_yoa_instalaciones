@@ -1,4 +1,7 @@
+"use client";
+
 import { reviews, siteConfig } from "@/lib/site-config";
+import { useLanguage } from "@/lib/language-context";
 
 function Stars({ rating }) {
   return (
@@ -13,13 +16,15 @@ function Stars({ rating }) {
 }
 
 export default function Reviews() {
+  const { t } = useLanguage();
+
   return (
     <section id="resenas" className="bg-stone-50 py-20">
       <div className="mx-auto max-w-6xl px-5">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight text-stone-900">Reseñas de clientes</h2>
-            <p className="mt-3 text-stone-600">Opiniones reales de trabajos realizados a través de Taskia.</p>
+            <h2 className="text-3xl font-bold tracking-tight text-stone-900">{t.reviews.title}</h2>
+            <p className="mt-3 text-stone-600">{t.reviews.subtitle}</p>
           </div>
           <a
             href={siteConfig.taskiaUrl}
@@ -27,7 +32,7 @@ export default function Reviews() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-stone-300 px-5 py-2.5 text-sm font-semibold text-stone-700 transition-colors hover:border-amber-600 hover:text-amber-700"
           >
-            Ver más reseñas en Taskia
+            {t.reviews.cta}
           </a>
         </div>
 

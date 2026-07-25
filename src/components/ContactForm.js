@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { siteConfig } from "@/lib/site-config";
 import { whatsappLink } from "@/lib/whatsapp";
+import { useLanguage } from "@/lib/language-context";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 const initialForm = {
@@ -13,19 +14,17 @@ const initialForm = {
   detalles: "",
 };
 
-function buildMessage(form) {
-  const lines = [
-    `Hola ${siteConfig.businessName}, quiero pedir un presupuesto.`,
-    `Nombre: ${form.nombre}`,
-  ];
-  if (form.telefono) lines.push(`Teléfono: ${form.telefono}`);
-  if (form.servicio) lines.push(`Servicio: ${form.servicio}`);
-  if (form.fecha) lines.push(`Fecha deseada: ${form.fecha}`);
-  lines.push(`Detalles: ${form.detalles}`);
+function buildMessage(form, t, businessName) {
+  const lines = [t.form.messageIntro(businessName), `${t.form.messageNombre}: ${form.nombre}`];
+  if (form.telefono) lines.push(`${t.form.messageTelefono}: ${form.telefono}`);
+  if (form.servicio) lines.push(`${t.form.messageServicio}: ${form.servicio}`);
+  if (form.fecha) lines.push(`${t.form.messageFecha}: ${form.fecha}`);
+  lines.push(`${t.form.messageDetalles}: ${form.detalles}`);
   return lines.join("\n");
 }
 
 export default function ContactForm() {
+  const { t } = useLanguage();
   const [form, setForm] = useState(initialForm);
   const [error, setError] = useState("");
 
@@ -38,12 +37,12 @@ export default function ContactForm() {
     event.preventDefault();
 
     if (!form.nombre.trim() || !form.detalles.trim()) {
-      setError("Por favor, indica al menos tu nombre y los detalles del servicio.");
+      setError(t.form.error);
       return;
     }
 
     setError("");
-    const url = whatsappLink(buildMessage(form));
+    const url = whatsappLink(buildMessage(form, t, siteConfig.businessName));
     window.open(url, "_blank", "noopener,noreferrer");
   }
 
@@ -51,7 +50,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4 sm:grid-cols-2">
       <div className="sm:col-span-1">
         <label htmlFor="nombre" className="mb-1 block text-sm font-medium text-stone-700">
-          Nombre *
+          {t.form.nombre}
         </label>
         <input
           id="nombre"
@@ -60,13 +59,13 @@ export default function ContactForm() {
           value={form.nombre}
           onChange={handleChange}
           className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
-          placeholder="Tu nombre"
+          placeholder={t.form.nombrePlaceholder}
         />
       </div>
 
       <div className="sm:col-span-1">
         <label htmlFor="telefono" className="mb-1 block text-sm font-medium text-stone-700">
-          Teléfono
+          {t.form.telefono}
         </label>
         <input
           id="telefono"
@@ -75,13 +74,13 @@ export default function ContactForm() {
           value={form.telefono}
           onChange={handleChange}
           className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
-          placeholder="600 000 000"
+          placeholder={t.form.telefonoPlaceholder}
         />
       </div>
 
       <div className="sm:col-span-1">
         <label htmlFor="servicio" className="mb-1 block text-sm font-medium text-stone-700">
-          Tipo de servicio
+          {t.form.servicio}
         </label>
         <input
           id="servicio"
@@ -90,13 +89,13 @@ export default function ContactForm() {
           value={form.servicio}
           onChange={handleChange}
           className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
-          placeholder="Ej. Montaje de mueble"
+          placeholder={t.form.servicioPlaceholder}
         />
       </div>
 
       <div className="sm:col-span-1">
         <label htmlFor="fecha" className="mb-1 block text-sm font-medium text-stone-700">
-          Fecha deseada
+          {t.form.fecha}
         </label>
         <input
           id="fecha"
@@ -110,7 +109,7 @@ export default function ContactForm() {
 
       <div className="sm:col-span-2">
         <label htmlFor="detalles" className="mb-1 block text-sm font-medium text-stone-700">
-          Detalles *
+          {t.form.detalles}
         </label>
         <textarea
           id="detalles"
@@ -119,7 +118,7 @@ export default function ContactForm() {
           value={form.detalles}
           onChange={handleChange}
           className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
-          placeholder="Cuéntame qué necesitas..."
+          placeholder={t.form.detallesPlaceholder}
         />
       </div>
 
@@ -131,7 +130,7 @@ export default function ContactForm() {
           className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105"
         >
           <WhatsAppIcon className="h-5 w-5" />
-          Enviar por WhatsApp
+          {t.form.submit}
         </button>
       </div>
     </form>

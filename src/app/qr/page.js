@@ -3,8 +3,10 @@
 import { useEffect, useRef } from "react";
 import QRCode from "qrcode";
 import { siteConfig } from "@/lib/site-config";
+import { useLanguage } from "@/lib/language-context";
 
 export default function QrPage() {
+  const { t } = useLanguage();
   const canvasRef = useRef(null);
   const urlRef = useRef(null);
 
@@ -32,12 +34,9 @@ export default function QrPage() {
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-md flex-col items-center justify-center gap-6 px-5 py-16 text-center">
       <h1 className="w-full min-w-0 text-2xl font-bold text-stone-900">
-        Código QR — {siteConfig.businessName}
+        {t.qr.title(siteConfig.businessName)}
       </h1>
-      <p className="w-full min-w-0 text-stone-600">
-        Este QR lleva directamente a esta web. Descárgalo e imprímelo en tu
-        tarjeta de presentación.
-      </p>
+      <p className="w-full min-w-0 text-stone-600">{t.qr.subtitle}</p>
 
       <canvas
         ref={canvasRef}
@@ -50,7 +49,7 @@ export default function QrPage() {
         onClick={handleDownload}
         className="rounded-full bg-stone-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105"
       >
-        Descargar PNG
+        {t.qr.download}
       </button>
     </main>
   );

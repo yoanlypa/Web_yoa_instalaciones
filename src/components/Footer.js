@@ -1,15 +1,20 @@
+"use client";
+
 import { siteConfig } from "@/lib/site-config";
 import { cities } from "@/lib/cities";
 import { whatsappLink } from "@/lib/whatsapp";
+import { useLanguage } from "@/lib/language-context";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { InstagramIcon, FacebookIcon } from "@/components/SocialIcons";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-stone-950 py-10 text-stone-400">
       <div className="mx-auto max-w-6xl px-5 pb-8 text-center sm:text-left">
         <p className="text-xs font-semibold tracking-wide text-stone-500 uppercase">
-          Zonas donde trabajo
+          {t.footer.zonas}
         </p>
         <nav className="mt-3 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm sm:justify-start">
           {cities.map((city) => (
@@ -32,7 +37,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-4">
           <a
-            href={whatsappLink(`Hola ${siteConfig.businessName}, quiero pedir información.`)}
+            href={whatsappLink(t.hero.whatsappMessageInfo(siteConfig.businessName))}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
@@ -61,7 +66,7 @@ export default function Footer() {
         </div>
 
         <p className="text-xs text-stone-500">
-          © {new Date().getFullYear()} {siteConfig.businessName}. Todos los derechos reservados.
+          {t.footer.rights(new Date().getFullYear(), siteConfig.businessName)}
         </p>
       </div>
     </footer>

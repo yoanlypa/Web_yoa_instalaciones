@@ -13,38 +13,53 @@ export const siteConfig = {
 
 export const services = [
   {
-    title: "Montaje de muebles",
-    description:
-      "Montaje de muebles de cualquier tipo (IKEA y otras marcas), listos y bien nivelados.",
+    title: { es: "Montaje de muebles", en: "Furniture assembly" },
+    description: {
+      es: "Montaje de muebles de cualquier tipo (IKEA y otras marcas), listos y bien nivelados.",
+      en: "Assembly of any kind of furniture (IKEA and other brands), finished and properly levelled.",
+    },
   },
   {
-    title: "Iluminación y ventilación",
-    description:
-      "Instalación de lámparas, apliques y ventiladores de techo.",
+    title: { es: "Iluminación y ventilación", en: "Lighting and ventilation" },
+    description: {
+      es: "Instalación de lámparas, apliques y ventiladores de techo.",
+      en: "Installation of lamps, wall lights and ceiling fans.",
+    },
   },
   {
-    title: "Fijación en pared",
-    description:
-      "Estanterías flotantes, soportes de TV, toalleros y accesorios de baño, bien anclados.",
+    title: { es: "Fijación en pared", en: "Wall mounting" },
+    description: {
+      es: "Estanterías flotantes, soportes de TV, toalleros y accesorios de baño, bien anclados.",
+      en: "Floating shelves, TV brackets, towel rails and bathroom accessories, securely fixed.",
+    },
   },
   {
-    title: "Persianas, estores y tendederos",
-    description:
-      "Instalación de persianas, estores y tendederos exteriores e interiores.",
+    title: { es: "Persianas, estores y tendederos", en: "Blinds, shades and clotheslines" },
+    description: {
+      es: "Instalación de persianas, estores y tendederos exteriores e interiores.",
+      en: "Installation of blinds, roller shades and indoor/outdoor clotheslines.",
+    },
   },
   {
-    title: "Grifos y electricidad básica",
-    description: "Cambio e instalación de grifos, enchufes e interruptores.",
+    title: { es: "Grifos y electricidad básica", en: "Taps and basic electrics" },
+    description: {
+      es: "Cambio e instalación de grifos, enchufes e interruptores.",
+      en: "Replacement and installation of taps, sockets and switches.",
+    },
   },
   {
-    title: "Carpintería e instalaciones a medida",
-    description:
-      "Puertas, paneles y mobiliario de madera fabricado e instalado a medida.",
+    title: { es: "Carpintería e instalaciones a medida", en: "Custom carpentry and installations" },
+    description: {
+      es: "Puertas, paneles y mobiliario de madera fabricado e instalado a medida.",
+      en: "Doors, panels and wooden furniture custom-made and installed.",
+    },
   },
   {
-    title: "Presupuesto personalizado",
-    description:
-      "Cuéntame lo que necesitas y te preparo un presupuesto ajustado, sin compromiso.",
+    title: { es: "Presupuesto personalizado", en: "Custom quote" },
+    description: {
+      es: "Cuéntame lo que necesitas y te preparo un presupuesto ajustado, sin compromiso.",
+      en: "Tell me what you need and I'll prepare a fair, no-obligation quote.",
+    },
   },
 ];
 
@@ -85,13 +100,19 @@ export const gallery = [
   {
     type: "image",
     src: "/images/trabajos/mueble-tv-chimenea.jpg",
-    alt: "Mueble de TV a medida con chimenea integrada y estanterías con iluminación",
-    caption: "Trabajo de carpintería a medida",
+    alt: {
+      es: "Mueble de TV a medida con chimenea integrada y estanterías con iluminación",
+      en: "Custom TV unit with integrated fireplace and lit shelving",
+    },
+    caption: { es: "Trabajo de carpintería a medida", en: "Custom carpentry work" },
   },
   {
     type: "image",
     src: "/images/trabajos/rascador-gatos-medida.jpg",
-    alt: "Rascador y mobiliario para gatos hecho a medida junto a una ventana",
-    caption: "Montaje de todo tipo de mobiliario",
+    alt: {
+      es: "Rascador y mobiliario para gatos hecho a medida junto a una ventana",
+      en: "Custom-made cat furniture and scratching post by a window",
+    },
+    caption: { es: "Montaje de todo tipo de mobiliario", en: "Assembly of all kinds of furniture" },
   },
 ];
