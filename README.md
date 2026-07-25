@@ -28,7 +28,7 @@ src/lib/site-config.js
   sustituirlos por los enlaces reales.
 - **`services`**: lista de servicios mostrados en la sección "Servicios".
 - **`gallery`**: fotos/vídeos de trabajos realizados. Las imágenes viven en
-  `public/images/trabajos/` y el vídeo en `public/videos/`.
+  `public/images/trabajos/` (también admite vídeos, con `type: "video"`).
 
 El texto de la sección "Sobre mí" (`src/components/About.js`) es un
 placeholder editable — personalízalo con tu experiencia real.
@@ -65,12 +65,3 @@ configurado como valor por defecto en `src/app/layout.js`.
 4. Cuando el DNS propague, Vercel activa el certificado SSL solo.
 5. Visita `/qr` en `https://yoainstalaciones.com/qr` para descargar el QR
    definitivo con el dominio real.
-
-## Nota sobre el vídeo de la galería
-
-`public/videos/instalacion-detalle.mov` pesa ~12 MB (no se pudo comprimir
-en este entorno por falta de herramientas de vídeo). Se carga de forma
-diferida (`preload="none"`) para no afectar el tiempo de carga inicial,
-pero conviene comprimirlo a MP4/H.264 más ligero antes de mostrarlo a
-muchos usuarios — con [HandBrake](https://handbrake.fr/) o `ffmpeg` es
-sencillo.

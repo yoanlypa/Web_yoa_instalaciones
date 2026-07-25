@@ -50,25 +50,14 @@ export const services = [
 export const gallery = [
   {
     type: "image",
-    src: "/images/trabajos/puerta-tragaluz-madera.jpg",
-    alt: "Puerta y tragaluz de madera a medida con acabado en tono nogal",
-    caption: "Puerta y tragaluz de madera a medida",
-  },
-  {
-    type: "image",
     src: "/images/trabajos/mueble-tv-chimenea.jpg",
     alt: "Mueble de TV a medida con chimenea integrada y estanterías con iluminación",
-    caption: "Mueble de TV con chimenea integrada",
+    caption: "Trabajo de carpintería a medida",
   },
   {
     type: "image",
     src: "/images/trabajos/rascador-gatos-medida.jpg",
     alt: "Rascador y mobiliario para gatos hecho a medida junto a una ventana",
-    caption: "Mobiliario a medida para mascotas",
-  },
-  {
-    type: "video",
-    src: "/videos/instalacion-detalle.mov",
-    caption: "Detalle de una instalación en proceso",
+    caption: "Montaje de todo tipo de mobiliario",
   },
 ];
