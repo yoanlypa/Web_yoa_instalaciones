@@ -6,6 +6,7 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 const navLinks = [
   { href: "#trabajos", label: "Trabajos" },
   { href: "#servicios", label: "Servicios" },
+  { href: "#resenas", label: "Reseñas" },
   { href: "#sobre-mi", label: "Sobre mí" },
   { href: "#contacto", label: "Contacto" },
 ];
