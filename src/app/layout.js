@@ -23,6 +23,9 @@ export const metadata = {
     description: siteConfig.description,
     images: ["/images/trabajos/mueble-tv-chimenea.jpg"],
   },
+  verification: {
+    google: "tlOOF4r2b8BDTnlyuWzQ1VCm0mD0g4qPEoj8ek4Xmwk",
+  },
 };
 
 const jsonLd = {
