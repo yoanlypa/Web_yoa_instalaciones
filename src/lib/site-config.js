@@ -12,29 +12,33 @@ export const siteConfig = {
 
 export const services = [
   {
-    title: "Instalaciones a medida",
+    title: "Montaje de muebles",
     description:
-      "Puertas, paneles, tragaluces y mobiliario de madera fabricado e instalado a medida.",
+      "Montaje de muebles de cualquier tipo (IKEA y otras marcas), listos y bien nivelados.",
   },
   {
-    title: "Montaje de mobiliario",
+    title: "Iluminación y ventilación",
     description:
-      "Muebles de TV, estanterías, armarios y mobiliario audiovisual, montados y ajustados con precisión.",
+      "Instalación de lámparas, apliques y ventiladores de techo.",
   },
   {
-    title: "Carpintería especializada",
+    title: "Fijación en pared",
     description:
-      "Piezas y mobiliario a medida para cualquier rincón de la casa, incluso proyectos especiales.",
+      "Estanterías flotantes, soportes de TV, toalleros y accesorios de baño, bien anclados.",
   },
   {
-    title: "Reparaciones básicas del hogar",
+    title: "Persianas, estores y tendederos",
     description:
-      "Pequeños arreglos de fontanería, electricidad e interiores. Del problema a la solución.",
+      "Instalación de persianas, estores y tendederos exteriores e interiores.",
   },
   {
-    title: "Instalación de electrodomésticos y accesorios",
+    title: "Grifos y electricidad básica",
+    description: "Cambio e instalación de grifos, enchufes e interruptores.",
+  },
+  {
+    title: "Carpintería e instalaciones a medida",
     description:
-      "Colocación y fijación segura de electrodomésticos, soportes de TV y accesorios varios.",
+      "Puertas, paneles y mobiliario de madera fabricado e instalado a medida.",
   },
   {
     title: "Presupuesto personalizado",
