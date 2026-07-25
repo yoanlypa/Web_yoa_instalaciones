@@ -2,7 +2,7 @@ export const siteConfig = {
   businessName: "Yoa Instalaciones",
   tagline: "Reparaciones e instalaciones hechas con cuidado",
   description:
-    "Trabajos de manitas: reparaciones básicas, instalaciones y carpintería a medida. Pide tu presupuesto por WhatsApp.",
+    "Montador de muebles e instalador en Málaga capital, Fuengirola, Mijas y alrededores: montaje de muebles, lámparas, ventiladores de techo, tendederos y grifos. Pide tu presupuesto por WhatsApp.",
   whatsappNumber: "34603379870",
   phoneDisplay: "+34 603 37 98 70",
   instagramUrl: "https://instagram.com/",

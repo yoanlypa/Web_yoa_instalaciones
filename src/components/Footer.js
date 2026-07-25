@@ -1,4 +1,5 @@
 import { siteConfig } from "@/lib/site-config";
+import { cities } from "@/lib/cities";
 import { whatsappLink } from "@/lib/whatsapp";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { InstagramIcon, FacebookIcon } from "@/components/SocialIcons";
@@ -6,7 +7,24 @@ import { InstagramIcon, FacebookIcon } from "@/components/SocialIcons";
 export default function Footer() {
   return (
     <footer className="bg-stone-950 py-10 text-stone-400">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-5 text-center sm:flex-row sm:justify-between sm:text-left">
+      <div className="mx-auto max-w-6xl px-5 pb-8 text-center sm:text-left">
+        <p className="text-xs font-semibold tracking-wide text-stone-500 uppercase">
+          Zonas donde trabajo
+        </p>
+        <nav className="mt-3 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm sm:justify-start">
+          {cities.map((city) => (
+            <a
+              key={city.slug}
+              href={`/montador-de-muebles-${city.slug}`}
+              className="transition-colors hover:text-amber-400"
+            >
+              {city.name}
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 border-t border-stone-800 px-5 pt-8 text-center sm:flex-row sm:justify-between sm:text-left">
         <div>
           <p className="text-base font-semibold text-white">{siteConfig.businessName}</p>
           <p className="text-sm">{siteConfig.phoneDisplay}</p>

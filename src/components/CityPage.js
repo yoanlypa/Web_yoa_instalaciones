@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import CityIntro from "@/components/CityIntro";
 import Gallery from "@/components/Gallery";
 import Services from "@/components/Services";
 import Reviews from "@/components/Reviews";
@@ -7,17 +7,12 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "Montador de muebles en Málaga | Yoa Instalaciones",
-  alternates: { canonical: "/" },
-};
-
-export default function Home() {
+export default function CityPage({ city }) {
   return (
     <>
       <Header />
       <main>
-        <Hero />
+        <CityIntro city={city} />
         <Gallery />
         <Services />
         <Reviews />
