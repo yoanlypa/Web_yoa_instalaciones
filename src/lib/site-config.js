@@ -7,7 +7,7 @@ export const siteConfig = {
   phoneDisplay: "+34 603 37 98 70",
   instagramUrl: "https://instagram.com/",
   facebookUrl: "https://facebook.com/",
-  taskiaUrl: "https://taskia.com/",
+  taskiaUrl: "https://www.taskia.es/t/496139",
   location: "España",
 };
 
