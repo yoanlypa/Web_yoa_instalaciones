@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ServicesMarquee from "@/components/ServicesMarquee";
 import Gallery from "@/components/Gallery";
+import { getGallery } from "@/lib/gallery-files";
 import Services from "@/components/Services";
 import DigitalServices from "@/components/DigitalServices";
 import Reviews from "@/components/Reviews";
@@ -21,7 +22,7 @@ export default function Home() {
       <main>
         <Hero />
         <ServicesMarquee />
-        <Gallery />
+        <Gallery items={getGallery()} />
         <Services />
         <Reviews />
         <DigitalServices />

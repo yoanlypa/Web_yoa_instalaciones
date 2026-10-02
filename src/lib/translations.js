@@ -25,6 +25,13 @@ export const translations = {
     gallery: {
       title: "Trabajos realizados",
       subtitle: "Una muestra de instalaciones y piezas a medida hechas con cuidado y atención al detalle.",
+      count: "trabajos",
+      more: "Ver más trabajos",
+      less: "Ver menos",
+      open: "Ampliar foto",
+      close: "Cerrar",
+      prev: "Foto anterior",
+      next: "Foto siguiente",
     },
     services: {
       title: "Servicios",
@@ -158,6 +165,13 @@ export const translations = {
     gallery: {
       title: "Completed work",
       subtitle: "A sample of installations and custom pieces made with care and attention to detail.",
+      count: "jobs",
+      more: "See more work",
+      less: "Show less",
+      open: "Enlarge photo",
+      close: "Close",
+      prev: "Previous photo",
+      next: "Next photo",
     },
     services: {
       title: "Services",

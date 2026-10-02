@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import CityIntro from "@/components/CityIntro";
 import Gallery from "@/components/Gallery";
+import { getGallery } from "@/lib/gallery-files";
 import Services from "@/components/Services";
 import Reviews from "@/components/Reviews";
 import About from "@/components/About";
@@ -13,7 +14,7 @@ export default function CityPage({ city }) {
       <Header />
       <main>
         <CityIntro city={city} />
-        <Gallery />
+        <Gallery items={getGallery()} />
         <Services />
         <Reviews />
         <About />

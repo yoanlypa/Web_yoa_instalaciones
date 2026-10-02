@@ -108,12 +108,57 @@ export const gallery = [
   },
   {
     type: "image",
+    src: "/images/trabajos/montaje-cocina-verde-salvia.jpg",
+    alt: {
+      es: "Cocina montada en verde salvia con encimera de madera, horno integrado y campana negra",
+      en: "Sage green kitchen with wooden worktop, built-in oven and black extractor hood",
+    },
+    caption: { es: "Montaje de cocina completa", en: "Full kitchen assembly" },
+  },
+  {
+    type: "image",
+    src: "/images/trabajos/papel-pintado-y-panelado-listones.jpg",
+    alt: {
+      es: "Pared con papel pintado de hojas y panelado de listones de madera",
+      en: "Wall with leaf-pattern wallpaper and wooden slat panelling",
+    },
+    caption: { es: "Papel pintado y panelado de listones", en: "Wallpaper and wooden slat panelling" },
+  },
+  {
+    type: "image",
+    src: "/images/trabajos/puerta-de-paso-blanca.jpg",
+    alt: {
+      es: "Puerta de paso blanca lacada recién instalada con su marco",
+      en: "Newly installed white lacquered interior door with frame",
+    },
+    caption: { es: "Instalación de puerta de paso", en: "Interior door installation" },
+  },
+  {
+    type: "image",
+    src: "/images/trabajos/montaje-escritorio-con-armarios.jpg",
+    alt: {
+      es: "Escritorio de madera con dos armarios montado y listo para trabajar",
+      en: "Wooden desk with two cabinets, assembled and ready to use",
+    },
+    caption: { es: "Montaje de escritorio con armarios", en: "Desk and cabinet assembly" },
+  },
+  {
+    type: "image",
     src: "/images/trabajos/rascador-gatos-medida.jpg",
     alt: {
       es: "Rascador y mobiliario para gatos hecho a medida junto a una ventana",
       en: "Custom-made cat furniture and scratching post by a window",
     },
     caption: { es: "Montaje de todo tipo de mobiliario", en: "Assembly of all kinds of furniture" },
+  },
+  {
+    type: "image",
+    src: "/images/trabajos/estanterias-metalicas-bajo-escalera.jpg",
+    alt: {
+      es: "Estanterías metálicas montadas aprovechando el hueco bajo la escalera",
+      en: "Metal shelving assembled to make use of the space under the stairs",
+    },
+    caption: { es: "Estanterías metálicas bajo la escalera", en: "Metal shelving under the stairs" },
   },
 ];
 
