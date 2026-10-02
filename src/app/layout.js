@@ -21,7 +21,7 @@ export const metadata = {
   openGraph: {
     title: siteConfig.businessName,
     description: siteConfig.description,
-    images: ["/images/trabajos/mueble-tv-chimenea.jpg"],
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: siteConfig.businessName }],
   },
   verification: {
     google: "tlOOF4r2b8BDTnlyuWzQ1VCm0mD0g4qPEoj8ek4Xmwk",
@@ -34,6 +34,9 @@ const jsonLd = {
   name: siteConfig.businessName,
   description: siteConfig.description,
   telephone: `+${siteConfig.whatsappNumber}`,
+  url: "https://yoainstalaciones.com",
+  logo: "https://yoainstalaciones.com/logo.png",
+  image: "https://yoainstalaciones.com/og.jpg",
   address: {
     "@type": "PostalAddress",
     addressRegion: "Málaga",

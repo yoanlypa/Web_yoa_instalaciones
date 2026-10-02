@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 import { whatsappLink } from "@/lib/whatsapp";
 import { useLanguage } from "@/lib/language-context";
@@ -24,8 +25,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-stone-950/90 text-white backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
-        <Link href="/" className="text-lg font-bold tracking-tight text-white">
-          {siteConfig.businessName}
+        <Link href="/" className="shrink-0" aria-label={`${siteConfig.businessName} — inicio`}>
+          <Image src="/logo-claro.svg" alt={siteConfig.businessName} width={89} height={48} priority className="h-12 w-auto sm:h-14" />
         </Link>
 
         <nav className="hidden gap-7 text-sm font-medium text-stone-300 lg:flex">

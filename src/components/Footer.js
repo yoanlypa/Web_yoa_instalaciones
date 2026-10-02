@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 import { cities } from "@/lib/cities";
 import { whatsappLink } from "@/lib/whatsapp";
@@ -34,8 +35,8 @@ export default function Footer() {
 
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 border-t border-stone-800 px-5 pt-8 text-center sm:flex-row sm:justify-between sm:text-left">
         <div>
-          <p className="text-base font-semibold text-white">{siteConfig.businessName}</p>
-          <p className="text-sm">{siteConfig.phoneDisplay}</p>
+          <Image src="/logo-claro.svg" alt={siteConfig.businessName} width={111} height={60} className="mx-auto h-14 w-auto sm:mx-0" />
+          <p className="mt-2 text-sm">{siteConfig.phoneDisplay}</p>
         </div>
 
         <div className="flex items-center gap-4">
