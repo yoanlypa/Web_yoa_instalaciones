@@ -24,13 +24,13 @@ export function DigitalServiceCards({ dark = false }) {
           } ${item.soon ? "opacity-80" : ""}`}
         >
           {item.soon && (
-            <span className="absolute top-4 right-4 rounded-full bg-amber-400/15 px-2.5 py-0.5 text-[11px] font-semibold tracking-wide text-amber-500 uppercase">
+            <span className="absolute top-4 right-4 rounded-full bg-brand-400/15 px-2.5 py-0.5 text-[11px] font-semibold tracking-wide text-brand-500 uppercase">
               {t.digital.soon}
             </span>
           )}
           <span
             className={`inline-flex h-11 w-11 items-center justify-center rounded-xl ${
-              dark ? "bg-amber-400/10 text-amber-300" : "bg-amber-50 text-amber-700"
+              dark ? "bg-brand-400/10 text-brand-300" : "bg-brand-50 text-brand-700"
             }`}
           >
             <DigitalIcon name={item.icon} />
@@ -51,7 +51,7 @@ export default function DigitalServices() {
       <div className="mx-auto max-w-6xl px-5">
         <div className="mb-14 grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
           <Reveal3D tilt={10}>
-            <span className="rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-1 text-xs font-semibold tracking-wide text-amber-300 uppercase">
+            <span className="rounded-full border border-brand-400/40 bg-brand-400/10 px-4 py-1 text-xs font-semibold tracking-wide text-brand-300 uppercase">
               {t.digital.badge}
             </span>
             <h2 className="mt-5 text-4xl font-extrabold tracking-tight text-balance sm:text-5xl">{t.digital.title}</h2>
@@ -65,7 +65,7 @@ export default function DigitalServices() {
         <div className="mt-10 flex flex-wrap gap-4">
           <Link
             href="/webs-para-negocios"
-            className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-stone-950 transition-transform hover:scale-105"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-stone-950 transition-transform hover:scale-105"
           >
             {t.digital.cta} →
           </Link>

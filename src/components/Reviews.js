@@ -31,7 +31,7 @@ export default function Reviews() {
             href={siteConfig.taskiaUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-stone-300 px-5 py-2.5 text-sm font-semibold text-stone-700 transition-colors hover:border-amber-600 hover:text-amber-700"
+            className="inline-flex items-center gap-2 rounded-full border border-stone-300 px-5 py-2.5 text-sm font-semibold text-stone-700 transition-colors hover:border-brand-600 hover:text-brand-700"
           >
             {t.reviews.cta}
           </a>

@@ -31,7 +31,7 @@ export default function Header() {
 
         <nav className="hidden gap-7 text-sm font-medium text-stone-300 lg:flex">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="transition-colors hover:text-amber-400">
+            <a key={link.href} href={link.href} className="transition-colors hover:text-brand-400">
               {link.label}
             </a>
           ))}
@@ -69,7 +69,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="block border-b border-white/5 py-3 text-base font-medium text-stone-200 hover:text-amber-400"
+              className="block border-b border-white/5 py-3 text-base font-medium text-stone-200 hover:text-brand-400"
             >
               {link.label}
             </a>

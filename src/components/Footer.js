@@ -22,13 +22,13 @@ export default function Footer() {
             <a
               key={city.slug}
               href={`/montador-de-muebles-${city.slug}`}
-              className="transition-colors hover:text-amber-400"
+              className="transition-colors hover:text-brand-400"
             >
               {city.name}
             </a>
           ))}
         </nav>
-        <a href="/webs-para-negocios" className="mt-4 inline-block text-sm font-semibold text-amber-400 hover:text-amber-300">
+        <a href="/webs-para-negocios" className="mt-4 inline-block text-sm font-semibold text-brand-400 hover:text-brand-300">
           {t.footer.digital} →
         </a>
       </div>
@@ -45,7 +45,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
-            className="rounded-full border border-stone-700 p-2.5 transition-colors hover:border-amber-500 hover:text-amber-400"
+            className="rounded-full border border-stone-700 p-2.5 transition-colors hover:border-brand-500 hover:text-brand-400"
           >
             <WhatsAppIcon className="h-5 w-5" />
           </a>
@@ -54,7 +54,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="rounded-full border border-stone-700 p-2.5 transition-colors hover:border-amber-500 hover:text-amber-400"
+            className="rounded-full border border-stone-700 p-2.5 transition-colors hover:border-brand-500 hover:text-brand-400"
           >
             <InstagramIcon className="h-5 w-5" />
           </a>
@@ -63,7 +63,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
-            className="rounded-full border border-stone-700 p-2.5 transition-colors hover:border-amber-500 hover:text-amber-400"
+            className="rounded-full border border-stone-700 p-2.5 transition-colors hover:border-brand-500 hover:text-brand-400"
           >
             <FacebookIcon className="h-5 w-5" />
           </a>

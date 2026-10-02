@@ -17,10 +17,10 @@ export default function WebServicesPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-stone-900 text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(245,158,11,0.18),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(133,160,119,0.22),transparent_55%)]" />
         <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-5 py-24 sm:py-28 lg:grid-cols-2">
           <div className="flex flex-col items-start gap-6">
-          <span className="rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-1 text-xs font-semibold tracking-wide text-amber-300 uppercase">
+          <span className="rounded-full border border-brand-400/40 bg-brand-400/10 px-4 py-1 text-xs font-semibold tracking-wide text-brand-300 uppercase">
             {w.badge}
           </span>
           <h1 className="max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">{w.title}</h1>
@@ -44,7 +44,7 @@ export default function WebServicesPage() {
         <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {w.problems.map((p) => (
             <li key={p} className="flex gap-3 rounded-2xl border border-stone-200 bg-stone-50 p-5 text-stone-700">
-              <span className="mt-0.5 font-bold text-amber-700" aria-hidden="true">✕</span>
+              <span className="mt-0.5 font-bold text-brand-700" aria-hidden="true">✕</span>
               {p}
             </li>
           ))}
@@ -63,7 +63,7 @@ export default function WebServicesPage() {
         <ol className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {w.steps.map((step, i) => (
             <Reveal3D as="li" key={step.title} tilt={14 + i * 3} className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <span className="text-3xl font-extrabold text-amber-700">0{i + 1}</span>
+              <span className="text-3xl font-extrabold text-brand-700">0{i + 1}</span>
               <h3 className="mt-3 font-semibold text-stone-900">{step.title}</h3>
               <p className="mt-2 text-sm text-stone-600">{step.text}</p>
             </Reveal3D>
@@ -76,7 +76,7 @@ export default function WebServicesPage() {
           <div>
             <h2 className="text-3xl font-bold tracking-tight">{w.proofTitle}</h2>
             <p className="mt-4 text-stone-300">{w.proofText}</p>
-            <Link href="/#resenas" className="mt-6 inline-block font-semibold text-amber-400 hover:text-amber-300">
+            <Link href="/#resenas" className="mt-6 inline-block font-semibold text-brand-400 hover:text-brand-300">
               {w.proofReviews} →
             </Link>
           </div>
@@ -89,8 +89,8 @@ export default function WebServicesPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-20">
-        <div className="rounded-3xl border border-dashed border-amber-400 bg-amber-50 p-8 sm:p-10">
-          <span className="rounded-full bg-amber-400/20 px-3 py-1 text-xs font-semibold tracking-wide text-amber-800 uppercase">
+        <div className="rounded-3xl border border-dashed border-brand-400 bg-brand-50 p-8 sm:p-10">
+          <span className="rounded-full bg-brand-400/20 px-3 py-1 text-xs font-semibold tracking-wide text-brand-800 uppercase">
             {t.digital.soon}
           </span>
           <h2 className="mt-4 text-2xl font-bold tracking-tight text-stone-900">{w.soonTitle}</h2>

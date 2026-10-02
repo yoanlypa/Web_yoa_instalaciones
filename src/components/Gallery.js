@@ -39,7 +39,7 @@ export default function Gallery({ items = [] }) {
       <div className="mx-auto max-w-6xl px-5">
         <Reveal3D tilt={10} className="mb-12 flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold tracking-[0.2em] text-amber-700 uppercase">Portfolio</p>
+            <p className="text-xs font-semibold tracking-[0.2em] text-brand-700 uppercase">Portfolio</p>
             <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-stone-900 sm:text-5xl">{t.gallery.title}</h2>
             <p className="mt-4 text-lg text-stone-600">{t.gallery.subtitle}</p>
           </div>
@@ -88,7 +88,7 @@ export default function Gallery({ items = [] }) {
             <button
               type="button"
               onClick={() => setShowAll((s) => !s)}
-              className="rounded-full border border-stone-300 px-6 py-3 text-sm font-semibold text-stone-800 transition-colors hover:border-amber-600 hover:text-amber-700"
+              className="rounded-full border border-stone-300 px-6 py-3 text-sm font-semibold text-stone-800 transition-colors hover:border-brand-600 hover:text-brand-700"
             >
               {showAll ? t.gallery.less : `${t.gallery.more} (${items.length - INITIAL})`}
             </button>

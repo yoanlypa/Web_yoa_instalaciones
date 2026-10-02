@@ -96,7 +96,7 @@ export default function AssemblyScene({ progressRef, className = "" }) {
     key.shadow.camera.bottom = -4;
     key.shadow.bias = -0.0005;
     scene.add(key);
-    const rim = new THREE.DirectionalLight("#f59e0b", 1.4);
+    const rim = new THREE.DirectionalLight("#9ab38c", 1.3);
     rim.position.set(-5, 2, -4);
     scene.add(rim);
     const ledLight = new THREE.PointLight("#ffb347", 0, 4, 1.6);
@@ -178,7 +178,7 @@ export default function AssemblyScene({ progressRef, className = "" }) {
     pot.position.set(0.85, 0.47, 0.02);
     const leaves = new THREE.Mesh(new THREE.IcosahedronGeometry(0.17, 1), leafMat);
     leaves.position.set(0.85, 0.66, 0.02);
-    const bookColors = ["#a8501f", "#1c1917", "#d6b98c", "#57534e", "#b45309"];
+    const bookColors = ["#556b4b", "#1c1917", "#d6b98c", "#57534e", "#85a077"];
     bookColors.forEach((c, i) => {
       const b = new THREE.Mesh(
         new THREE.BoxGeometry(0.06 + (i % 2) * 0.02, 0.26 + (i % 3) * 0.04, 0.3),
@@ -188,14 +188,14 @@ export default function AssemblyScene({ progressRef, className = "" }) {
       b.castShadow = true;
       deco.add(b);
     });
-    const vase = new THREE.Mesh(new THREE.SphereGeometry(0.12, 24, 16), new THREE.MeshStandardMaterial({ color: "#f59e0b", roughness: 0.25, metalness: 0.2 }));
+    const vase = new THREE.Mesh(new THREE.SphereGeometry(0.12, 24, 16), new THREE.MeshStandardMaterial({ color: "#85a077", roughness: 0.3, metalness: 0.15 }));
     vase.position.set(-0.2, -0.13, 0.04);
     [pot, leaves, vase].forEach((m) => { m.castShadow = true; deco.add(m); });
     unit.add(deco);
 
     // Destornillador que gira alrededor durante el montaje
     const tool = new THREE.Group();
-    const grip = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.07, 0.36, 16), new THREE.MeshStandardMaterial({ color: "#f59e0b", roughness: 0.4 }));
+    const grip = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.07, 0.36, 16), new THREE.MeshStandardMaterial({ color: "#85a077", roughness: 0.4 }));
     const shaft = new THREE.Mesh(new THREE.CylinderGeometry(0.015, 0.015, 0.42, 10), metal);
     shaft.position.y = 0.38;
     tool.add(grip, shaft);
@@ -218,7 +218,7 @@ export default function AssemblyScene({ progressRef, className = "" }) {
     }
     const dustGeo = new THREE.BufferGeometry();
     dustGeo.setAttribute("position", new THREE.BufferAttribute(dustPos, 3));
-    const dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({ color: "#fbbf24", size: 0.025, transparent: true, opacity: 0.55, depthWrite: false }));
+    const dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({ color: "#b0c6a3", size: 0.025, transparent: true, opacity: 0.55, depthWrite: false }));
     scene.add(dust);
 
     // Interacción: perspectiva que sigue al ratón

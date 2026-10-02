@@ -13,7 +13,7 @@ export default function CityIntro({ city }) {
   return (
     <section className="bg-stone-900 py-20 text-white sm:py-28">
       <div className="mx-auto max-w-4xl px-5">
-        <span className="rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-1 text-xs font-semibold tracking-wide text-amber-300 uppercase">
+        <span className="rounded-full border border-brand-400/40 bg-brand-400/10 px-4 py-1 text-xs font-semibold tracking-wide text-brand-300 uppercase">
           {t.cityIntro.badge(city.name)}
         </span>
         <h1 className="mt-6 max-w-2xl text-4xl font-extrabold tracking-tight sm:text-5xl">

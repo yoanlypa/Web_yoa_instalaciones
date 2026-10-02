@@ -58,7 +58,7 @@ export default function ContactForm() {
           type="text"
           value={form.nombre}
           onChange={handleChange}
-          className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
+          className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600"
           placeholder={t.form.nombrePlaceholder}
         />
       </div>
@@ -73,7 +73,7 @@ export default function ContactForm() {
           type="tel"
           value={form.telefono}
           onChange={handleChange}
-          className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
+          className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600"
           placeholder={t.form.telefonoPlaceholder}
         />
       </div>
@@ -88,7 +88,7 @@ export default function ContactForm() {
           type="text"
           value={form.servicio}
           onChange={handleChange}
-          className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
+          className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600"
           placeholder={t.form.servicioPlaceholder}
         />
       </div>
@@ -103,7 +103,7 @@ export default function ContactForm() {
           type="date"
           value={form.fecha}
           onChange={handleChange}
-          className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
+          className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600"
         />
       </div>
 
@@ -117,7 +117,7 @@ export default function ContactForm() {
           rows={4}
           value={form.detalles}
           onChange={handleChange}
-          className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-600"
+          className="w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600"
           placeholder={t.form.detallesPlaceholder}
         />
       </div>

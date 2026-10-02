@@ -13,7 +13,7 @@ export default function LanguageSwitcher() {
         aria-label="Español"
         aria-pressed={lang === "es"}
         className={`flex h-7 w-7 items-center justify-center rounded-full text-base transition-opacity ${
-          lang === "es" ? "opacity-100 ring-2 ring-amber-500" : "opacity-40 hover:opacity-70"
+          lang === "es" ? "opacity-100 ring-2 ring-brand-500" : "opacity-40 hover:opacity-70"
         }`}
       >
         🇪🇸
@@ -24,7 +24,7 @@ export default function LanguageSwitcher() {
         aria-label="English"
         aria-pressed={lang === "en"}
         className={`flex h-7 w-7 items-center justify-center rounded-full text-base transition-opacity ${
-          lang === "en" ? "opacity-100 ring-2 ring-amber-500" : "opacity-40 hover:opacity-70"
+          lang === "en" ? "opacity-100 ring-2 ring-brand-500" : "opacity-40 hover:opacity-70"
         }`}
       >
         🇬🇧

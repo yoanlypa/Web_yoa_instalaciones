@@ -46,7 +46,7 @@ export default function Hero() {
     <section id="top" ref={sectionRef} className="relative h-[200vh] bg-stone-950 text-white">
       <div className="sticky top-0 h-[100svh] overflow-hidden">
         {/* Fondo: brillo cálido + rejilla de "plano técnico" */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_35%,rgba(245,158,11,0.22),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_35%,rgba(133,160,119,0.24),transparent_60%)]" />
         <div className="blueprint absolute inset-0 opacity-[0.07]" />
 
         <AssemblyScene
@@ -58,7 +58,7 @@ export default function Hero() {
 
         <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-end px-5 pb-14 lg:justify-center lg:pb-0">
           <div className="max-w-xl">
-            <span className="inline-block rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-1 text-xs font-semibold tracking-wide text-amber-300 uppercase">
+            <span className="inline-block rounded-full border border-brand-400/40 bg-brand-400/10 px-4 py-1 text-xs font-semibold tracking-wide text-brand-300 uppercase">
               {t.hero.badge}
             </span>
             <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-balance sm:text-6xl">
@@ -85,7 +85,7 @@ export default function Hero() {
             </div>
             <a
               href="/webs-para-negocios"
-              className="mt-5 inline-block text-sm font-medium text-amber-300 underline-offset-4 hover:underline"
+              className="mt-5 inline-block text-sm font-medium text-brand-300 underline-offset-4 hover:underline"
             >
               {t.hero.digitalLink}
             </a>
@@ -97,7 +97,7 @@ export default function Hero() {
               {t.hero.stages.map((label, i) => (
                 <li
                   key={label}
-                  className={`transition-colors duration-500 ${i <= stage ? "text-amber-300" : "text-stone-500"}`}
+                  className={`transition-colors duration-500 ${i <= stage ? "text-brand-300" : "text-stone-500"}`}
                 >
                   <span className="mr-1.5 tabular-nums">0{i + 1}</span>
                   {label}
@@ -105,7 +105,7 @@ export default function Hero() {
               ))}
             </ol>
             <div className="mt-3 h-px w-full max-w-xs overflow-hidden bg-white/10">
-              <div ref={barRef} className="h-full origin-left bg-amber-400" style={{ transform: "scaleX(0)" }} />
+              <div ref={barRef} className="h-full origin-left bg-brand-400" style={{ transform: "scaleX(0)" }} />
             </div>
             <p className={`mt-3 text-xs text-stone-400 transition-opacity duration-500 ${stage === 0 ? "opacity-100" : "opacity-0"}`}>
               {t.hero.scrollHint} ↓

@@ -24,7 +24,7 @@ export default function About() {
             ["5★", t.about.stat3Label],
           ].map(([value, label]) => (
             <Tilt key={label} className="rounded-2xl border border-stone-200 bg-stone-50 p-5 text-center sm:p-6">
-              <p className="text-3xl font-extrabold text-amber-700 sm:text-4xl">{value}</p>
+              <p className="text-3xl font-extrabold text-brand-700 sm:text-4xl">{value}</p>
               <p className="mt-1 text-xs text-stone-600 sm:text-sm">{label}</p>
             </Tilt>
           ))}

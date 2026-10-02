@@ -9,7 +9,7 @@ export default function ServicesMarquee() {
   const row = [...names, ...names];
 
   return (
-    <div className="overflow-hidden border-y border-stone-200 bg-amber-400 py-4" aria-hidden="true">
+    <div className="overflow-hidden border-y border-stone-200 bg-brand-400 py-4" aria-hidden="true">
       <div className="marquee-track flex w-max gap-10 whitespace-nowrap">
         {row.map((n, i) => (
           <span key={i} className="flex items-center gap-10 text-lg font-bold tracking-tight text-stone-950">
