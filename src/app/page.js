@@ -1,7 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import ServicesMarquee from "@/components/ServicesMarquee";
 import Gallery from "@/components/Gallery";
 import Services from "@/components/Services";
+import DigitalServices from "@/components/DigitalServices";
 import Reviews from "@/components/Reviews";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
@@ -18,9 +20,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <ServicesMarquee />
         <Gallery />
         <Services />
         <Reviews />
+        <DigitalServices />
         <About />
         <Contact />
       </main>

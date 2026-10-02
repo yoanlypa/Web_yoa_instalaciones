@@ -6,6 +6,7 @@ export default function sitemap() {
 
   const staticRoutes = [
     { url: `${base}/`, lastModified: now, changeFrequency: "monthly", priority: 1 },
+    { url: `${base}/webs-para-negocios`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/qr`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
   ];
 

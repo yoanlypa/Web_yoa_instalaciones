@@ -16,3 +16,63 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #f59e0b;
+  color: #1c1917;
+}
+
+/* Rejilla tipo plano técnico para el fondo del hero */
+.blueprint {
+  background-image:
+    linear-gradient(to right, #fbbf24 1px, transparent 1px),
+    linear-gradient(to bottom, #fbbf24 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 60% 40%, black 30%, transparent 75%);
+}
+
+/* Tarjetas con inclinación 3D + brillo que sigue al ratón */
+.tilt {
+  transition: transform 0.25s ease-out;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.tilt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, 0.35), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tilt:hover::after {
+  opacity: 1;
+}
+
+/* Cinta de servicios en movimiento */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 38s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .marquee-track {
+    animation: none;
+  }
+  .tilt {
+    transition: none;
+  }
+}

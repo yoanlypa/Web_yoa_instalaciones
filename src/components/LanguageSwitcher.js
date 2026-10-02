@@ -6,7 +6,7 @@ export default function LanguageSwitcher() {
   const { lang, setLang } = useLanguage();
 
   return (
-    <div className="flex items-center gap-1 rounded-full border border-stone-200 p-1">
+    <div className="flex items-center gap-1 rounded-full border border-white/15 p-1">
       <button
         type="button"
         onClick={() => setLang("es")}

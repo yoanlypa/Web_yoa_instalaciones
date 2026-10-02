@@ -4,8 +4,10 @@ export const translations = {
       trabajos: "Trabajos",
       servicios: "Servicios",
       resenas: "Reseñas",
-      sobreMi: "Sobre mí",
+      sobreMi: "Sobre nosotros",
+      digital: "Webs para negocios",
       contacto: "Contacto",
+      menu: "Menú",
     },
     hero: {
       badge: "Trabajos de manitas",
@@ -16,6 +18,9 @@ export const translations = {
       ctaSecondary: "Ver trabajos",
       whatsappMessage: (name) => `Hola ${name}, quiero pedir un presupuesto.`,
       whatsappMessageInfo: (name) => `Hola ${name}, quiero pedir información.`,
+      digitalLink: "¿Tienes un negocio? También mejoramos su web →",
+      stages: ["Las piezas", "El montaje", "Listo en casa"],
+      scrollHint: "Desliza y míralo montarse",
     },
     gallery: {
       title: "Trabajos realizados",
@@ -31,13 +36,14 @@ export const translations = {
       cta: "Ver más reseñas en Taskia",
     },
     about: {
-      title: "Sobre mí",
+      title: "Sobre nosotros",
       paragraph1: (name) =>
-        `Soy la persona detrás de ${name}. Me dedico a hacer reparaciones e instalaciones cuidando cada detalle, desde el primer contacto hasta el acabado final. Cada trabajo se hace a medida de lo que necesita el cliente, con materiales de calidad y buena comunicación en todo momento.`,
+        `Soy Yoanly, la persona detrás de ${name}. Con un equipo de confianza que me respalda, hacemos reparaciones e instalaciones cuidando cada detalle, desde el primer contacto hasta el acabado final, con materiales de calidad y buena comunicación en todo momento.`,
       paragraph2:
-        "Si tienes un proyecto en mente, por pequeño o grande que sea, hablamos por WhatsApp y te preparo un presupuesto claro y sin sorpresas.",
+        "Además, ayudamos a otros emprendedores a mejorar su web y su presencia en internet. Si tienes un proyecto en mente, hablamos por WhatsApp y te preparo un presupuesto claro y sin sorpresas.",
       stat1Label: "Trabajos a medida",
       stat2Label: "Respuesta por WhatsApp",
+      stat3Label: "Valoración en Taskia",
     },
     contact: {
       title: "Pide tu presupuesto",
@@ -67,6 +73,50 @@ export const translations = {
     footer: {
       zonas: "Zonas donde trabajo",
       rights: (year, name) => `© ${year} ${name}. Todos los derechos reservados.`,
+      digital: "Webs para negocios",
+    },
+    digital: {
+      badge: "Para autónomos y pequeños negocios",
+      title: "Tu negocio también tiene que verse bien en internet",
+      subtitle:
+        "Además de los trabajos de manitas, ayudamos a otros emprendedores a mejorar su web. Somos del oficio: sabemos lo que es pasar el día trabajando y no tener tiempo para la web, así que nos encargamos de todo.",
+      cta: "Ver cómo trabajamos",
+      ctaWhatsapp: "Quiero mejorar mi web",
+      soon: "Próximamente",
+      mockGoogle: "Visible en Google",
+      whatsappMessage: (name) => `Hola ${name}, tengo un negocio y quiero mejorar mi web.`,
+    },
+    webPage: {
+      badge: "Webs para negocios en Málaga",
+      title: "Mejoramos la web de tu negocio para que te lleguen más clientes",
+      subtitle:
+        "Webs rápidas, pensadas para el móvil y fáciles de encontrar en Google. Tú sigues con tu trabajo; nosotros nos encargamos de la web.",
+      problemsTitle: "¿Te suena alguna de estas?",
+      problems: [
+        "Tu web es antigua o se ve mal en el móvil.",
+        "Los clientes no encuentran tu teléfono a la primera.",
+        "Cuando buscan tu servicio en tu zona, no sales en Google.",
+        "No tienes web y todo depende del boca a boca.",
+      ],
+      servicesTitle: "Qué hacemos por tu negocio",
+      stepsTitle: "Cómo trabajamos",
+      steps: [
+        { title: "Hablamos", text: "Nos cuentas por WhatsApp a qué se dedica tu negocio y qué necesitas." },
+        { title: "Te enseñamos una propuesta", text: "Preparamos tu web y la ves funcionando antes de decidir nada." },
+        { title: "La publicamos", text: "Nos encargamos de todo: dominio, alojamiento y que Google la encuentre." },
+        { title: "Te seguimos ayudando", text: "Cambios de fotos, textos o precios cuando los necesites." },
+      ],
+      proofTitle: "Somos del oficio",
+      proofText:
+        "Esta misma web la hemos hecho nosotros, y la usamos cada día para conseguir clientes de manitas. Sabemos lo que busca un cliente antes de llamar porque nosotros también vivimos de ello.",
+      proofReviews: "Mira lo que dicen nuestros clientes de manitas",
+      soonTitle: "Próximamente: redes sociales",
+      soonText:
+        "Estamos formando un equipo para llevar las redes sociales de emprendedores. Si te interesa, escríbenos y te avisamos en cuanto esté listo.",
+      soonCta: "Avísame",
+      soonMessage: (name) => `Hola ${name}, me interesa que llevéis las redes sociales de mi negocio cuando esté disponible.`,
+      ctaTitle: "¿Hablamos de tu web?",
+      ctaText: "Escríbenos por WhatsApp y te contamos sin compromiso qué podemos mejorar.",
     },
     cityIntro: {
       badge: (city) => `Montador de muebles en ${city}`,
@@ -87,8 +137,10 @@ export const translations = {
       trabajos: "Work",
       servicios: "Services",
       resenas: "Reviews",
-      sobreMi: "About",
+      sobreMi: "About us",
+      digital: "Websites for businesses",
       contacto: "Contact",
+      menu: "Menu",
     },
     hero: {
       badge: "Handyman work",
@@ -99,6 +151,9 @@ export const translations = {
       ctaSecondary: "See my work",
       whatsappMessage: (name) => `Hi ${name}, I'd like to request a quote.`,
       whatsappMessageInfo: (name) => `Hi ${name}, I'd like some information.`,
+      digitalLink: "Own a business? We also improve its website →",
+      stages: ["The parts", "Assembly", "Ready at home"],
+      scrollHint: "Scroll to watch it assemble",
     },
     gallery: {
       title: "Completed work",
@@ -114,13 +169,14 @@ export const translations = {
       cta: "See more reviews on Taskia",
     },
     about: {
-      title: "About me",
+      title: "About us",
       paragraph1: (name) =>
-        `I'm the person behind ${name}. I take care of repairs and installations paying attention to every detail, from the first contact to the final finish. Every job is tailored to what the customer needs, using quality materials and clear communication throughout.`,
+        `I'm Yoanly, the person behind ${name}. Backed by a trusted team, we take care of repairs and installations paying attention to every detail, from the first contact to the final finish, using quality materials and clear communication throughout.`,
       paragraph2:
-        "If you have a project in mind, big or small, message me on WhatsApp and I'll prepare a clear quote with no surprises.",
+        "We also help other entrepreneurs improve their website and online presence. If you have a project in mind, message me on WhatsApp and I'll prepare a clear quote with no surprises.",
       stat1Label: "Custom-made work",
       stat2Label: "WhatsApp response",
+      stat3Label: "Rating on Taskia",
     },
     contact: {
       title: "Get your quote",
@@ -150,6 +206,50 @@ export const translations = {
     footer: {
       zonas: "Areas I work in",
       rights: (year, name) => `© ${year} ${name}. All rights reserved.`,
+      digital: "Websites for businesses",
+    },
+    digital: {
+      badge: "For freelancers and small businesses",
+      title: "Your business needs to look good online too",
+      subtitle:
+        "Besides handyman work, we help other entrepreneurs improve their website. We're tradespeople too: we know what it's like to work all day with no time for the website, so we take care of everything.",
+      cta: "See how we work",
+      ctaWhatsapp: "I want a better website",
+      soon: "Coming soon",
+      mockGoogle: "Visible on Google",
+      whatsappMessage: (name) => `Hi ${name}, I have a business and I'd like to improve my website.`,
+    },
+    webPage: {
+      badge: "Websites for businesses in Málaga",
+      title: "We improve your business website so more customers reach you",
+      subtitle:
+        "Fast, mobile-first websites that are easy to find on Google. You keep working; we take care of the website.",
+      problemsTitle: "Does any of this sound familiar?",
+      problems: [
+        "Your website is outdated or looks bad on mobile.",
+        "Customers can't find your phone number straight away.",
+        "You don't show up on Google when people search for your service nearby.",
+        "You have no website and everything depends on word of mouth.",
+      ],
+      servicesTitle: "What we do for your business",
+      stepsTitle: "How we work",
+      steps: [
+        { title: "We talk", text: "Tell us on WhatsApp what your business does and what you need." },
+        { title: "We show you a proposal", text: "We build your website and you see it working before deciding anything." },
+        { title: "We publish it", text: "We handle everything: domain, hosting and getting Google to find it." },
+        { title: "We keep helping", text: "Photo, text or price changes whenever you need them." },
+      ],
+      proofTitle: "We're tradespeople too",
+      proofText:
+        "We built this very website ourselves, and we use it every day to win handyman customers. We know what a customer looks for before calling because we make our living from it too.",
+      proofReviews: "See what our handyman customers say",
+      soonTitle: "Coming soon: social media",
+      soonText:
+        "We're putting together a team to run social media for entrepreneurs. If you're interested, message us and we'll let you know as soon as it's ready.",
+      soonCta: "Let me know",
+      soonMessage: (name) => `Hi ${name}, I'd like you to run my business's social media when it's available.`,
+      ctaTitle: "Shall we talk about your website?",
+      ctaText: "Message us on WhatsApp and we'll tell you, with no obligation, what we can improve.",
     },
     cityIntro: {
       badge: (city) => `Furniture assembler in ${city}`,

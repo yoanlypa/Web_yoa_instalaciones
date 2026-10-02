@@ -116,3 +116,40 @@ export const gallery = [
     caption: { es: "Montaje de todo tipo de mobiliario", en: "Assembly of all kinds of furniture" },
   },
 ];
+
+// Servicios digitales para otros negocios (webs, presencia online y redes)
+export const digitalServices = [
+  {
+    icon: "web",
+    title: { es: "Webs que traen clientes", en: "Websites that bring in customers" },
+    description: {
+      es: "Webs rápidas, pensadas para el móvil, con tu teléfono y WhatsApp siempre a un toque.",
+      en: "Fast, mobile-first websites with your phone and WhatsApp always one tap away.",
+    },
+  },
+  {
+    icon: "refresh",
+    title: { es: "Renovamos tu web actual", en: "We refresh your current website" },
+    description: {
+      es: "Le damos una imagen nueva sin perder lo que Google ya conoce de tu negocio.",
+      en: "A new look without losing what Google already knows about your business.",
+    },
+  },
+  {
+    icon: "social",
+    soon: true,
+    title: { es: "Redes sociales", en: "Social media" },
+    description: {
+      es: "Próximamente: un equipo dedicado a llevar las redes sociales de emprendedores como tú.",
+      en: "Coming soon: a dedicated team to run social media for entrepreneurs like you.",
+    },
+  },
+  {
+    icon: "google",
+    title: { es: "Presencia en Google", en: "Presence on Google" },
+    description: {
+      es: "Que te encuentren cuando buscan tu servicio en tu zona, en Google y en Google Maps.",
+      en: "Get found when people search for your service in your area, on Google and Google Maps.",
+    },
+  },
+];

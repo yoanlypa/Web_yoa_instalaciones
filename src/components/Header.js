@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { whatsappLink } from "@/lib/whatsapp";
@@ -9,25 +10,27 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Header() {
   const { t } = useLanguage();
+  const [open, setOpen] = useState(false);
 
   const navLinks = [
-    { href: "#trabajos", label: t.nav.trabajos },
-    { href: "#servicios", label: t.nav.servicios },
-    { href: "#resenas", label: t.nav.resenas },
-    { href: "#sobre-mi", label: t.nav.sobreMi },
-    { href: "#contacto", label: t.nav.contacto },
+    { href: "/#trabajos", label: t.nav.trabajos },
+    { href: "/#servicios", label: t.nav.servicios },
+    { href: "/webs-para-negocios", label: t.nav.digital },
+    { href: "/#resenas", label: t.nav.resenas },
+    { href: "/#sobre-mi", label: t.nav.sobreMi },
+    { href: "/#contacto", label: t.nav.contacto },
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-black/5 bg-[var(--background)]/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-stone-950/90 text-white backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
-        <Link href="/" className="text-lg font-bold tracking-tight text-stone-900">
+        <Link href="/" className="text-lg font-bold tracking-tight text-white">
           {siteConfig.businessName}
         </Link>
 
-        <nav className="hidden gap-8 text-sm font-medium text-stone-600 md:flex">
+        <nav className="hidden gap-7 text-sm font-medium text-stone-300 lg:flex">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="transition-colors hover:text-amber-700">
+            <a key={link.href} href={link.href} className="transition-colors hover:text-amber-400">
               {link.label}
             </a>
           ))}
@@ -44,8 +47,34 @@ export default function Header() {
             <WhatsAppIcon className="h-4 w-4" />
             <span className="hidden sm:inline">WhatsApp</span>
           </a>
+          <button
+            type="button"
+            onClick={() => setOpen((o) => !o)}
+            aria-expanded={open}
+            aria-controls="menu-movil"
+            aria-label={t.nav.menu}
+            className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 rounded-full border border-white/15 lg:hidden"
+          >
+            <span className={`h-0.5 w-4 bg-white transition-transform ${open ? "translate-y-1 rotate-45" : ""}`} />
+            <span className={`h-0.5 w-4 bg-white transition-transform ${open ? "-translate-y-1 -rotate-45" : ""}`} />
+          </button>
         </div>
       </div>
+
+      {open && (
+        <nav id="menu-movil" className="border-t border-white/10 px-5 pb-5 lg:hidden">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="block border-b border-white/5 py-3 text-base font-medium text-stone-200 hover:text-amber-400"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      )}
     </header>
   );
 }

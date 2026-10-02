@@ -2,6 +2,7 @@
 
 import { reviews, siteConfig } from "@/lib/site-config";
 import { useLanguage } from "@/lib/language-context";
+import Reveal3D from "@/components/fx/Reveal3D";
 
 function Stars({ rating }) {
   return (
@@ -19,11 +20,11 @@ export default function Reviews() {
   const { t } = useLanguage();
 
   return (
-    <section id="resenas" className="bg-stone-50 py-20">
+    <section id="resenas" className="bg-stone-50 py-24">
       <div className="mx-auto max-w-6xl px-5">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight text-stone-900">{t.reviews.title}</h2>
+            <h2 className="text-4xl font-extrabold tracking-tight text-stone-900 sm:text-5xl">{t.reviews.title}</h2>
             <p className="mt-3 text-stone-600">{t.reviews.subtitle}</p>
           </div>
           <a
@@ -37,15 +38,16 @@ export default function Reviews() {
         </div>
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {reviews.map((review) => (
-            <div
+          {reviews.map((review, i) => (
+            <Reveal3D
               key={review.author}
+              tilt={12 + (i % 3) * 4}
               className="flex flex-col gap-3 rounded-2xl border border-stone-200 bg-white p-6 shadow-sm"
             >
               <Stars rating={review.rating} />
               <p className="text-sm text-stone-600">&ldquo;{review.text}&rdquo;</p>
               <p className="mt-auto text-sm font-semibold text-stone-900">{review.author}</p>
-            </div>
+            </Reveal3D>
           ))}
         </div>
       </div>

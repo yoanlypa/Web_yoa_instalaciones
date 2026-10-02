@@ -27,6 +27,9 @@ export default function Footer() {
             </a>
           ))}
         </nav>
+        <a href="/webs-para-negocios" className="mt-4 inline-block text-sm font-semibold text-amber-400 hover:text-amber-300">
+          {t.footer.digital} →
+        </a>
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 border-t border-stone-800 px-5 pt-8 text-center sm:flex-row sm:justify-between sm:text-left">
