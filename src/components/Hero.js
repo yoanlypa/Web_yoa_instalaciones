@@ -10,8 +10,16 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 // La escena 3D solo se carga en el navegador y en un bloque aparte (no frena la carga inicial)
 const AssemblyScene = dynamic(() => import("@/components/three/AssemblyScene"), { ssr: false });
 
-export default function Hero() {
-  const { t } = useLanguage();
+export default function Hero({ city } = {}) {
+  const { t, lang } = useLanguage();
+  // En las páginas de zona el texto se adapta a la ciudad; en la home queda igual
+  const badge = city ? t.cityIntro.badge(city.name) : t.hero.badge;
+  const title = city ? t.cityIntro.title(city.name) : t.hero.title;
+  const subtitle = city ? city.intro[lang] : t.hero.subtitle;
+  const ctaPrimary = city ? t.cityIntro.ctaPrimary(city.name) : t.hero.ctaPrimary;
+  const waMessage = city
+    ? t.cityIntro.whatsappMessage(siteConfig.businessName, city.name)
+    : t.hero.whatsappMessage(siteConfig.businessName);
   const sectionRef = useRef(null);
   const progressRef = useRef(0);
   const barRef = useRef(null);
@@ -59,22 +67,22 @@ export default function Hero() {
         <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-end px-5 pb-14 lg:justify-center lg:pb-0">
           <div className="max-w-xl">
             <span className="inline-block rounded-full border border-brand-400/40 bg-brand-400/10 px-4 py-1 text-xs font-semibold tracking-wide text-brand-300 uppercase">
-              {t.hero.badge}
+              {badge}
             </span>
             <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-balance sm:text-6xl">
-              {t.hero.title}
+              {title}
             </h1>
-            <p className="mt-5 max-w-lg text-base text-stone-300 sm:text-lg">{t.hero.subtitle}</p>
+            <p className="mt-5 max-w-lg text-base text-stone-300 sm:text-lg">{subtitle}</p>
 
             <div className="mt-7 flex flex-wrap gap-3">
               <a
-                href={whatsappLink(t.hero.whatsappMessage(siteConfig.businessName))}
+                href={whatsappLink(waMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-green-900/30 transition-transform hover:scale-105"
               >
                 <WhatsAppIcon className="h-5 w-5" />
-                {t.hero.ctaPrimary}
+                {ctaPrimary}
               </a>
               <a
                 href="#trabajos"
